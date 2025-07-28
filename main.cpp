@@ -39,18 +39,24 @@ class Account {
     // Module for expense tracker
     void totalexpense() {
         double total = 0.0;
-        cout << "------------------- Expense tracker ----------------------\n";
-        cout << "Date\t\t\tDescription\t\t\tAmount\n";
-        // This step is done to only extract and display the expense done so far.
+        cout << "------------------- Expense Tracker ----------------------\n";
+        cout << left << setw(15) << "Date"
+             << setw(25) << "Description"
+             << setw(15) << "Amount" << endl;
+        cout << string(55, '-') << endl;
+    
         for (int i = 0; i < transactions.size(); i++) {
             if (transactions[i].choice == 2) {
-                cout << transactions[i].date << "\t\t\t" << transactions[i].description
-                     << "\t\t\t" << transactions[i].amount << endl;
+                cout << left << setw(15) << transactions[i].date
+                     << setw(25) << transactions[i].description
+                     << setw(15) << fixed << setprecision(2) << transactions[i].amount << endl;
                 total += transactions[i].amount;
             }
         }
-        cout << "Total Expenses: " << total << endl;
+    
+        cout << "\nTotal Expenses: Rs. " << fixed << setprecision(2) << total << endl;
     }
+    
 
     // Module used to print the transactions entered by the user so far
     void print_transactions() {
