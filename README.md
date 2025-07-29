@@ -38,7 +38,7 @@ This is a C++-based console application designed to help individuals efficiently
 
 ## 📸 Sample Output
 
-Screenshots of program output are available in the `screenshots/` directory (or refer to the PDF if hosted elsewhere).
+Screenshots of program output are available in the `Screenshots/` directory (or refer to the PDF if hosted elsewhere).
 
 ---
 
